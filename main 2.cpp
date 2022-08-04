@@ -34,11 +34,11 @@ class Teacher {
      public:
      
      void new_teacher();
-     void add_grade(int);
+     void add_grades(int);
      void remove_grades(int);
      void file_students();
 
-     int create_teacher_no; //create a random teacher number.
+     int create_teacher_no(); //create a random teacher number.
      
      Teacher(const string &lastname, const int &age, const int &teacher_no)
      {}
@@ -51,14 +51,14 @@ vector <int>grades;
  
  void clear()
  {
-     cout<<"x543;h"<<endl;
+     cout<<"\n ";
  }
  
 void intro()
 {
     clear();
-    cout<<"GRADE BOOK"<<endl;
-    cout<<"By: Shaden"<<endl;
+    cout<<"\n\t GRADE BOOK";
+    cout<<"\n\t By: Shaden";
     
 }
 
@@ -66,17 +66,17 @@ void Student::new_student()
 {
     intro();
     int random_key;
-    cout<<"first name:"<<endl;
+    cout<<"\n\n first name:";
     cin>> first_name;
-    cout<<"last name :"<<endl;
+    cout<<"last name :";
     cin>>last_name;
-    cout<<"age:"<<endl;
+    cout<<"age:";
     cin>>age;
     cout<<"your student number is:"<<student_no<<endl;
      
      Student new_student (age, first_name, last_name, student_no);
      
-     Student.push_back(new_student);
+     students.push_back(new_student);
 }
 void Student::change_information()
 {
@@ -136,7 +136,7 @@ void Teacher::remove_grades(int grade)
     cin>> index;
     grades.erase(grades.begin() + index);
 }
-void Teacher::add_grade(int grade )    
+void Teacher::add_grades(int grade )    
     {
         cout<< "Enter grade :";
         cin >> grade;
@@ -170,7 +170,7 @@ void Teacher::add_grade(int grade )
         Student std;
         
         string teacher_or_student;
-        cout<<" Are u are a student or teacher?";
+        cout<<" Are u a student or teacher?";
         cin>> teacher_or_student;
          if (teacher_or_student =="teacher"){
              
@@ -195,7 +195,7 @@ void Teacher::add_grade(int grade )
                      cout<<"press 1.";
                      cin>> grade;
                      
-                     tch.add_grade(grade);
+                     tch.add_grades(grade);
                      break;
                      
                      case 3:
@@ -247,6 +247,5 @@ void Teacher::add_grade(int grade )
          }
                      
 }
-
 
 
