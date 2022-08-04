@@ -66,13 +66,13 @@ void Student::new_student()
 {
     intro();
     int random_key;
-    cout<<"\n\n first name:";
+    cout<<"\n\n First name:";
     cin>> first_name;
-    cout<<"last name :";
+    cout<<"Last name :";
     cin>>last_name;
-    cout<<"age:";
+    cout<<"Age:";
     cin>>age;
-    cout<<"your student number is:"<<student_no<<endl;
+    cout<<"Your Student Number Is:"<<student_no<<endl;
      
      Student new_student (age, first_name, last_name, student_no);
      
@@ -82,21 +82,21 @@ void Student::change_information()
 {
     intro();
 int random_key;
-    cout<< "first name :";
+    cout<< "First Name :";
     cin>> first_name;
     
-    cout<< "last name :";
+    cout<< "Last Name :";
     cin>> last_name;
     
-    cout <<"age:";
+    cout <<"Age:";
     cin>>age;
     
-    cout << "Your student number is :"<< student_no << endl;
+    cout << "Your Student Number Is :"<< student_no << endl;
 }
 
 void Student::show_student_no()
 {
-    cout<< " Your student number is :"<< student_no<< endl;
+    cout<< " Your Student Number Is :"<< student_no<< endl;
 }
 
 int Student::create_student_no()
@@ -119,31 +119,31 @@ int Student::create_student_no()
 void Teacher::new_teacher()
 {
     clear();
-    cout<< "last name :";
+    cout<< "Last Name :";
     cin >> lastname;
     
-    cout<< "age :";
+    cout<< "Age :";
     cin >> age;
     
     teacher_no =
     create_teacher_no();
-    cout<< "your teacher number is :" << teacher_no << endl;
+    cout<< "Your Teacher Number Is :" << teacher_no << endl;
 }
 void Teacher::remove_grades(int grade)
 {
     int index;
-    cout<< " Enter index:";
+    cout<< " Enter Index:";
     cin>> index;
     grades.erase(grades.begin() + index);
 }
 void Teacher::add_grades(int grade )    
     {
-        cout<< "Enter grade :";
+        cout<< "Enter Grade :";
         cin >> grade;
         
         if ( grade > 10)
         {
-            cout << " Please enter a grade smaller than 10"<< endl;
+            cout << " Please Enter A Grade Smaller Than 10"<< endl;
         }
         else
         {
@@ -154,7 +154,7 @@ void Teacher::add_grades(int grade )
     void Teacher:: file_students()
     {
         fstream myFile;
-        myFile << "first name" << "  " << " last name" << "  "<< "age" << endl;
+        myFile << "First Name" << "  " << " Last Name" << "  "<< "Age" << endl;
         
         for ( int i = 1; i < students.size(); i++){
             myFile <<
@@ -170,19 +170,19 @@ void Teacher::add_grades(int grade )
         Student std;
         
         string teacher_or_student;
-        cout<<" Are u a student or teacher?";
+        cout<<" Are You A Student Or Teacher? (If You Are Student Choose S , If You Are Teacher Choose T) ";
         cin>> teacher_or_student;
-         if (teacher_or_student =="teacher"){
+         if (teacher_or_student =="T"){
              
              int ch;
              
              do{
-               cout<<"[1].new teacher."<<endl;
-               cout<<"[2].add grades."<<endl;
-               cout<<"[3].remove grades."<<endl;
-               cout<<"[4].file all students."<<endl;
-               cout<<"[5].exit."<<endl;
-               cout<<"choice";
+               cout<<"[1].New Teacher."<<endl;
+               cout<<"[2].Add Grades."<<endl;
+               cout<<"[3].Remove Grades."<<endl;
+               cout<<"[4].File All Students."<<endl;
+               cout<<"[5].Exit."<<endl;
+               cout<<"Choice";
                cin>>ch;
                
                     switch(ch){
@@ -192,14 +192,14 @@ void Teacher::add_grades(int grade )
                      
                      case 2 :
                      int grade ;
-                     cout<<"press 1.";
+                     cout<<"Press 1.";
                      cin>> grade;
                      
                      tch.add_grades(grade);
                      break;
                      
                      case 3:
-                     cout<<"entere a grade:";
+                     cout<<"Entere A Grade:";
                      cin>>grade;
                      
                      tch.remove_grades(grade);
@@ -209,7 +209,7 @@ void Teacher::add_grades(int grade )
                      tch.file_students();
                      
                      default:
-                     cout<<"try again";
+                     cout<<"Try Again";
                      break;
                  }
                  
@@ -220,11 +220,11 @@ void Teacher::add_grades(int grade )
          }else{
              int ch;
              do{
-              cout<<"\n[1].new student."<<endl;
-               cout<<"[2].change student information ."<<endl;
-               cout<<"[3].show student number."<<endl;
-               cout<<"[4].exit."<<endl;
-               cout<<"choice";
+              cout<<"\n[1].New Student."<<endl;
+               cout<<"[2].Change Student Information ."<<endl;
+               cout<<"[3].Show Student Number."<<endl;
+               cout<<"[4].Exit."<<endl;
+               cout<<"Choice";
                cin>>ch;
                switch(ch){
                    case 1:
@@ -239,7 +239,7 @@ void Teacher::add_grades(int grade )
                     std.show_student_no();
                     break;
                     default :
-                    cout<<"try again.";
+                    cout<<"Try Again.";
                     break;
                   
                }
