@@ -57,8 +57,8 @@ vector <int>grades;
 void intro()
 {
     clear();
-    cout<<"\n\t GRADE BOOK";
-    cout<<"\n\t By: Shaden";
+    cout<<"  ";
+    cout<<" ";
     
 }
 
@@ -66,7 +66,7 @@ void Student::new_student()
 {
     intro();
     int random_key;
-    cout<<"\n\n First name:";
+    cout<<"\n First name:";
     cin>> first_name;
     cout<<"Last name :";
     cin>>last_name;
@@ -182,7 +182,7 @@ void Teacher::add_grades(int grade )
                cout<<"[3].Remove Grades."<<endl;
                cout<<"[4].File All Students."<<endl;
                cout<<"[5].Exit."<<endl;
-               cout<<"Choice";
+               cout<<"Choice : ";
                cin>>ch;
                
                     switch(ch){
